@@ -1,0 +1,36 @@
+/* Colors */
+body {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+}
+
+h1, h2, h3, h4 {
+    color: #007bff; /* Bootstrap's Primary Blue */
+}
+
+.text-blue {
+    color: #007bff; /* Brand identifier color */
+}
+
+.container {
+    max-width: 900px; /* Center content */
+}
+
+/* Buttons */
+.btn-light {
+    background-color: #ffffff; /* White button */
+    color: #007bff; /* Blue text */
+    border: 2px solid #007bff;
+}
+
+.btn-light:hover {
+    background-color: #007bff; /* Blue hover */
+    color: #ffffff; /* White text */
+}
+
+/* Image placeholder styling */
+img {
+    border: 2px solid #ddd; /* Light gray border */
+    padding: 5px;
+    background-color: #ffffff; /* White background */
+}
