@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import OptIn
 
-# Register your models here.
+# Register the OptIn model
+admin.site.register(OptIn)

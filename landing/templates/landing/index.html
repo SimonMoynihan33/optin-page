@@ -9,7 +9,7 @@
     <h1>Attention Footballers!</h1>
     <p>Discover Drills GAA Players Are Using...</p>
     <form method="POST">
-        {% csrf_token %}
+        {% csrf_token %} <!-- Protect against CSRF attacks -->
         <label for="nickname">Nickname:</label>
         <input type="text" id="nickname" name="nickname" required>
         <br>
