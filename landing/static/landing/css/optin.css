@@ -1,36 +1,33 @@
-/* Colors */
 body {
-    background-color: #000000; /* Black background */
-    color: #ffffff; /* White text */
+    background: linear-gradient(135deg, #0a0f40, #0035ff); /* Blue gradient */
 }
 
-h1, h2, h3, h4 {
-    color: #007bff; /* Bootstrap's Primary Blue */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #0035ff, #0a0f40);
+    color: #fff;
 }
 
-.text-blue {
-    color: #007bff; /* Brand identifier color */
+.cta {
+    background: #0035ff;
+    color: #fff;
 }
 
-.container {
-    max-width: 900px; /* Center content */
+footer {
+    background: #0a0f40;
+    color: #777;
 }
 
-/* Buttons */
-.btn-light {
-    background-color: #ffffff; /* White button */
-    color: #007bff; /* Blue text */
-    border: 2px solid #007bff;
+footer .social-icons a {
+    font-size: 1.5rem;
+    text-decoration: none;
 }
 
-.btn-light:hover {
-    background-color: #007bff; /* Blue hover */
-    color: #ffffff; /* White text */
+.btn-info {
+    background: #00e0ff;
+    border: none;
 }
 
-/* Image placeholder styling */
-img {
-    border: 2px solid #ddd; /* Light gray border */
-    padding: 5px;
-    background-color: #ffffff; /* White background */
+.btn-info:hover {
+    background: #00c3e0;
 }
