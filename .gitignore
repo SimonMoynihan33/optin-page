@@ -1,0 +1,32 @@
+
+You don’t need to delete any files manually, but you should exclude certain files and folders from your Git repository by using a .gitignore file to keep your project clean and professional. Here’s what you need to do:
+
+1. Create a .gitignore File
+Create a file named .gitignore in your project root folder (next to venv, optin.css, and optin.html).
+
+2. Add These to .gitignore
+Add the following content to the .gitignore file:
+
+plaintext
+Copy code
+# Ignore virtual environment
+venv/
+
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore system-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE files
+.vscode/
+.idea/
+
+# Ignore unnecessary files
+*.key
+*.pem
+*.pub
+optin-page
