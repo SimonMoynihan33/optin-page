@@ -30,3 +30,6 @@ Thumbs.db
 *.pem
 *.pub
 optin-page
+
+# Ignore sensitive files
+.env
