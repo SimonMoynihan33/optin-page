@@ -29,10 +29,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-h(^@wv))kkzzsl3o2dd%a*o!(6w^%)wbn2)^s1#1e-7q8xr#m('
+SECRET_KEY = os.getenv('SECRET_KEY', 'fallback-secret-key-for-dev-only')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'vinnys-email-opt-in-page.onrender.com',
@@ -40,6 +41,9 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://vinnys-email-opt-in-page.onrender.com',
+]
 
 # Application definition
 
@@ -92,8 +96,7 @@ WSGI_APPLICATION = 'optin_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.dummy',
     }
 }
 
@@ -139,6 +142,10 @@ STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 # Directory where `collectstatic` will store all static files
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'landing/static'),
+]
+
 # Media files (via Cloudinary)
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
@@ -154,5 +161,6 @@ MAILCHIMP_API_KEY = os.getenv('MAILCHIMP_API_KEY')
 MAILCHIMP_AUDIENCE_ID = os.getenv('MAILCHIMP_AUDIENCE_ID')
 
 # Cloudinary
-CLOUDINARY_URL = os.getenv('CLOUDINARY_URL')  # Load from environment variables
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+CLOUDINARY_URL = os.getenv('CLOUDINARY_URL')
+if not CLOUDINARY_URL:
+    raise ValueError("CLOUDINARY_URL is not set in environment variables")
