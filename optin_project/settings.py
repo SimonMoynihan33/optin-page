@@ -33,7 +33,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'fallback-secret-key-for-dev-only')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'vinnys-email-opt-in-page.onrender.com',
@@ -137,16 +137,15 @@ USE_TZ = True
 
 # Static files (via Cloudinary)
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
-
-# Directory where `collectstatic` will store all static files
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'landing/static'),
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Media files (via Cloudinary)
+# Static files storage
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+
+# Media files (for uploaded files)
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
