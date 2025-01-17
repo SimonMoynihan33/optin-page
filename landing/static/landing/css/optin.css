@@ -89,6 +89,39 @@ footer {
     transform: translateY(-2px);
 }
 
+/* Form Styles */
+form .mb-3 {
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form input:focus {
+    border-color: #00e0ff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 224, 255, 0.5);
+}
+
+form .text-danger {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    color: red;
+}
+
+
 /* Fade-in effect */
 .fade-in {
     opacity: 0;
@@ -119,6 +152,10 @@ footer {
     text-decoration: none !important;
 }
 
+div.text-center {
+    margin: 1rem; /* Ensures spacing on smaller screens */
+}
+
 a {
     text-decoration: none;
 }
@@ -136,8 +173,10 @@ a {
         display: none; /* Hide the long heading */
     }
 
-    .input-width {
-        width: 80%;
+    form {
+        width: 80% !important;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .mobile-heading {

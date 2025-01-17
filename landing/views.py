@@ -1,17 +1,17 @@
 from django.shortcuts import render
-from .models import OptIn  # Import the model
+from .forms import OptInForm
 
 def index(request):
-    if request.method == 'POST':
-        # Get data from the submitted form
-        nickname = request.POST.get('nickname')
-        email = request.POST.get('email')
+    if request.method == "POST":
+        form = OptInForm(request.POST)
+        if form.is_valid():
+            nickname = form.cleaned_data['nickname']
+            email = form.cleaned_data['email']
+            
+            # Logic for storing or sending email data (e.g., to Mailchimp)
 
-        # Save the data to the database
-        OptIn.objects.create(nickname=nickname, email=email)
+            return render(request, 'landing/thank_you.html')
+    else:
+        form = OptInForm()
 
-        # Render a thank-you page after successful submission
-        return render(request, 'landing/thank_you.html')
-
-    # Render the main landing page for GET requests
-    return render(request, 'landing/index.html')
+    return render(request, 'landing/index.html', {'form': form})
