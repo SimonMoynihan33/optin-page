@@ -10,7 +10,7 @@ Add the following content to the .gitignore file:
 plaintext
 Copy code
 # Ignore virtual environment
-venv/
+venv
 
 # Ignore Python bytecode files
 __pycache__/
@@ -30,6 +30,7 @@ Thumbs.db
 *.pem
 *.pub
 optin-page
+staticfiles/
 
 # Ignore sensitive files
 .env
