@@ -21,7 +21,7 @@
         <h1 class="display-6 fw-bold fade-in mobile-heading">Drills GAA Players Use To Improve Speed, Power, and Agility Before the Season Starts!</h1>
 
         <img src="{% static 'landing/images/ai-book-cover.jpeg' %}" alt="Book Cover" class="img-fluid my-4 fade-in" style="max-width: 300px;">
-        <a href="#download" class="btn btn-info btn-lg mt-4 fade-in">Download free off-season program ⬇</a>
+        <a href="#download" class="main-signup-btn btn btn-info btn-lg mt-4 fade-in">Signup for free off-season program ⬇</a>
     </section>
 
 
@@ -32,7 +32,7 @@
             <div class="col-md-6 fade-in">
                 <h3>The Aggression Awareness Technician</h3>
                 <p>Methods that elite footballers use to push people around and keep their heads in the game!</p>
-                <a href="#download" class="btn btn-info btn-lg mt-4 w-100 text-center">Download Now</a>
+                <a href="#download" class="btn btn-info btn-lg mt-4 w-100 text-center">Signup Now</a>
             </div>
             <div class="col-md-6 fade-in">
                 <img src="{% static 'landing/images/transformation-1.jpeg' %}" alt="Transformation 1" class="img-fluid rounded">
@@ -42,7 +42,7 @@
             <div class="col-md-6 order-md-2 fade-in">
                 <h3>The Speed Dial Transition</h3>
                 <p>Techniques that will have you quicker than ever without losing out on your agility. You’ll be a cheetah that can actually turn...</p>
-                <a href="#download" class="btn btn-info btn-lg mt-4 w-100 text-center">Download Now</a>
+                <a href="#download" class="btn btn-info btn-lg mt-4 w-100 text-center">Signup Now</a>
             </div>
             <div class="col-md-6 order-md-1 fade-in">
                 <img src="{% static 'landing/images/transformation-2.jpeg' %}" alt="Transformation 2" class="img-fluid rounded">
@@ -52,7 +52,7 @@
             <div class="col-md-6 fade-in">
                 <h3>The Juiced-Up County-Man</h3>
                 <p>Will have you looking like an Olympia competitor but performing like a top-level county player.</p>
-                <a href="#download" class="btn btn-info btn-lg mt-4 w-100 text-center">Download Now</a>
+                <a href="#download" class="btn btn-info btn-lg mt-4 w-100 text-center">Signup Now</a>
             </div>
             <div class="col-md-6 fade-in">
                 <img src="{% static 'landing/images/transformation-3.jpeg' %}" alt="Transformation 3" class="img-fluid rounded">
@@ -65,8 +65,8 @@
         <h2 class="fw-bold">Get The-Off-Season-Program Guide Now!</h2>
         <form method="POST" class="mt-4">
             {% csrf_token %}
-            <input type="text" name="nickname" class="form-control mb-3 w-50 mx-auto" placeholder="Your Nickname" required>
-            <input type="email" name="email" class="form-control mb-3 w-50 mx-auto" placeholder="Your Email" required>
+            <input type="text" name="nickname" class="form-control mb-3 input-width  mx-auto" placeholder="Your Nickname" required>
+            <input type="email" name="email" class="form-control mb-3 input-width mx-auto" placeholder="Your Email" required>
             <button type="submit" class="btn btn-info btn-lg">Submit</button>
         </form>
     </section>
@@ -74,7 +74,10 @@
     <!-- Footer -->
     <footer class="footer text-center py-4 fade-in">
         <p class="small">
-            By adding your email and clicking the "yes email my off-season program now" button, you confirm that you agree to our terms and conditions and privacy policy.
+            By providing your email and clicking the "Submit" button, you agree to receive emails about the Off-Season Program, including updates, offers, and exclusive content. You can unsubscribe at any time.
+        </p>
+        <p class="watermark small mt-2">
+            Developed by <a href="https://github.com/SimonMoynihan33" class="text-info" target="_blank">Simon Moynihan</a>.
         </p>
     </footer>
 

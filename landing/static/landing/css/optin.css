@@ -110,10 +110,34 @@ footer {
     display: none;
 }
 
+.input-width {
+    width: 50%;
+}
+
+.watermark {
+    font-size: .48rem;
+    text-decoration: none !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* For screens smaller than 380px */
+@media (max-width: 380px) {
+    .main-signup-btn {
+        font-size: 1.1rem;
+    }
+}
+
 /* For screens smaller than 768px */
 @media (max-width: 768px) {
     .main-heading {
         display: none; /* Hide the long heading */
+    }
+
+    .input-width {
+        width: 80%;
     }
 
     .mobile-heading {
