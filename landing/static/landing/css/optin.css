@@ -19,10 +19,13 @@ p {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
     background: linear-gradient(135deg, #0035ff, #0a0f40);
     color: #fff;
     padding: 20px;
+}
+
+.top-text {
+    margin-top: 50px !important;
 }
 
 .main-heading {
@@ -157,6 +160,16 @@ footer {
 /* Small Adjustments */
 .input-width {
     width: 50%;
+}
+
+.main-signup-btn {
+    margin-bottom: 50px;
+}
+
+@media (max-width: 480px) {
+    .program-book {
+        max-height: 70%;
+    }
 }
 
 /* Responsive: Smaller than 380px */
