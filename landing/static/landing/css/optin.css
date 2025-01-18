@@ -3,7 +3,8 @@ body {
     background: linear-gradient(135deg, #0a0f40, #0035ff); /* Blue gradient */
     font-family: 'Montserrat', sans-serif;
     color: #fff;
-    padding-top: calc(20px + env(safe-area-inset-top));
+    padding-top: env(safe-area-inset-top); /* Account for notches or status bars */
+    margin-top: 0;
 }
 
 h1, h2, h3 {
