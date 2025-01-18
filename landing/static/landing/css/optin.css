@@ -169,13 +169,6 @@ footer {
     width: 50%;
 }
 
-@media (max-width: 540px) {
-    .mobile-top-margin {
-        padding-top: 10px;
-        margin-top: 10px;
-    }
-}
-
 /* Responsive: Smaller than 380px */
 @media (max-width: 380px) {
     .main-signup-btn {
