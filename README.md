@@ -1,5 +1,7 @@
 # Opt-In Page for Off-Season Training Program
 
+[Visit the Page](https://vinnys-email-opt-in-page.onrender.com/)
+
 ## Overview
 This is a responsive, SEO-optimized opt-in landing page built with Django, Bootstrap, and Mailchimp integration. The page allows users to enter their email and nickname to receive a free off-season training program for GAA footballers. Emails are automatically stored in Mailchimp via its API, and the site is fully mobile-friendly with a modern, professional design.
 
