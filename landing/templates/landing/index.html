@@ -106,9 +106,18 @@
             <div class="mb-3">
                 {{ form.email.label_tag }}
                 {{ form.email }}
+                
+                <!-- Show Django Form Validation Errors -->
                 {% if form.email.errors %}
                     <div class="text-danger">
                         {{ form.email.errors|join:", " }}
+                    </div>
+                {% endif %}
+            
+                <!-- Show Mailchimp API Errors -->
+                {% if error %}
+                    <div class="alert alert-danger text-center mt-3">
+                        {{ error }}
                     </div>
                 {% endif %}
             </div>
