@@ -107,6 +107,11 @@ optin-page/
 - Add an admin panel to view signups within Django.
 - Implement A/B testing for different landing page versions.
 - Improve the design with additional animations and visuals.
+- **Automated Ping Bot:** Create a script or use an external service (e.g., UptimeRobot, a simple cron job, or a lightweight serverless function) to periodically ping the site. This prevents Render’s long reboot times due to inactivity, ensuring a more seamless user experience, and allows the client to continue using the free tier.
+- **Advanced Analytics Integration:** Implement Google Analytics or a privacy-focused alternative like Plausible to track user interactions.
+- **Dark Mode Support:** Add a toggle to switch between light and dark themes dynamically.
+- **Email Customization:** Allow users to choose the type of content they receive upon sign-up.
+- **Multilingual Support:** Offer translations for different languages to expand the audience reach.
 
 ## Testing
 - 
