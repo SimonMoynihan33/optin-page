@@ -102,15 +102,6 @@ optin-page/
 - **Django Debug Mode** is disabled in production.
 - **CSRF Protection** is enabled.
 
-## Bugs & Fixes
-### Fixed Bugs
-- **Static Files Not Loading in Production:** Initially, static files weren’t being served correctly. This was resolved by configuring WhiteNoise to manage static files properly.
-- **Mailchimp Integration Not Working:** There were issues with API key validation, which were fixed by ensuring the API key and audience ID were correctly set in the `.env` file.
-- **Deployment Build Errors:** Incorrect build commands led to failures in deployment on Render. Adjusting the build command resolved this.
-
-### Known Issues (Unresolved)
-- **Cloudinary Integration Failed:** Originally, Cloudinary was planned for media storage, but it was removed due to persistent issues with images not being served correctly.
-
 ## Future Enhancements
 - Add an admin panel to view signups within Django.
 - Implement A/B testing for different landing page versions.
@@ -121,8 +112,8 @@ optin-page/
 - **Email Customization:** Allow users to choose the type of content they receive upon sign-up.
 - **Multilingual Support:** Offer translations for different languages to expand the audience reach.
 
+## Testing
+Testing was carried out in my [TESTING.md file](/TESTING.md)
+
 ## Contributors
 Developed by **Simon Moynihan**. Feel free to contribute via pull requests.
-
-## License
-MIT License. See `LICENSE` for more details.
