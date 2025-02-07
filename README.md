@@ -8,15 +8,13 @@ This is a responsive, SEO-optimized opt-in landing page built with Django, Boots
 - **Mailchimp Integration:** Captures emails and sends them to Mailchimp.
 - **SEO Optimization:** Includes proper metadata, Open Graph tags, and fast-loading assets.
 - **Dynamic Styling:** CSS animations and a gradient background for a sleek UI.
-- **Cloud-Based Image Hosting:** Cloudinary is used for media storage.
-- **Efficient Static File Handling:** Uses WhiteNoise to serve static files in production.
+- **Efficient Static File Handling:** Uses WhiteNoise to serve static files and images in production.
 
 ## Technologies Used
 - **Backend:** Django 5.1.5
 - **Frontend:** Bootstrap 5.3, CSS animations
 - **Database:** Not used (Mailchimp API handles email storage)
 - **Static File Management:** WhiteNoise
-- **Media Storage:** Cloudinary
 - **Deployment:** Render
 
 ## Installation & Setup
@@ -45,7 +43,6 @@ Create a `.env` file in the project root and add:
 SECRET_KEY=your-django-secret-key
 MAILCHIMP_API_KEY=your-mailchimp-api-key
 MAILCHIMP_AUDIENCE_ID=your-mailchimp-audience-id
-CLOUDINARY_URL=your-cloudinary-url
 DEBUG=True  # Set to False in production
 ```
 
@@ -103,18 +100,27 @@ optin-page/
 - **Django Debug Mode** is disabled in production.
 - **CSRF Protection** is enabled.
 
+## Bugs & Fixes
+### Fixed Bugs
+- **Static Files Not Loading in Production:** Initially, static files weren’t being served correctly. This was resolved by configuring WhiteNoise to manage static files properly.
+- **Mailchimp Integration Not Working:** There were issues with API key validation, which were fixed by ensuring the API key and audience ID were correctly set in the `.env` file.
+- **Deployment Build Errors:** Incorrect build commands led to failures in deployment on Render. Adjusting the build command resolved this.
+
+### Known Issues (Unresolved)
+- **Cloudinary Integration Failed:** Originally, Cloudinary was planned for media storage, but it was removed due to persistent issues with images not being served correctly.
+
 ## Future Enhancements
 - Add an admin panel to view signups within Django.
 - Implement A/B testing for different landing page versions.
 - Improve the design with additional animations and visuals.
-- **Automated Ping Bot:** Create a script or use an external service (e.g., UptimeRobot, a simple cron job, or a lightweight serverless function) to periodically ping the site. This prevents Render’s long reboot times due to inactivity, ensuring a more seamless user experience, and allows the client to continue using the free tier.
+- **Automated Ping Bot:** Create a script or use an external service (e.g., UptimeRobot, a simple cron job, or a lightweight serverless function) to periodically ping the site. This prevents Render’s long reboot times due to inactivity, ensuring a more seamless user experience.
 - **Advanced Analytics Integration:** Implement Google Analytics or a privacy-focused alternative like Plausible to track user interactions.
 - **Dark Mode Support:** Add a toggle to switch between light and dark themes dynamically.
 - **Email Customization:** Allow users to choose the type of content they receive upon sign-up.
 - **Multilingual Support:** Offer translations for different languages to expand the audience reach.
 
-## Testing
-- 
-
 ## Contributors
 Developed by **Simon Moynihan**. Feel free to contribute via pull requests.
+
+## License
+MIT License. See `LICENSE` for more details.
