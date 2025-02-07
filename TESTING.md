@@ -87,17 +87,6 @@ flake8 . --max-line-length=79
 
 ---
 
-## 5️⃣ Future Enhancements
-- **Automated Ping Bot**: Implement a scheduled bot (e.g., cron job, UptimeRobot) to periodically ping the site, preventing long reboot times on Render.
-- **Enhanced Admin Panel**: Add an admin dashboard to track email signups.
-- **A/B Testing**: Test different landing page variations to improve conversions.
-- **Advanced Analytics**: Integrate **Google Analytics** or **Plausible Analytics**.
-- **Dark Mode Support**: Add a toggle for dark mode.
-- **Email Customization**: Allow users to select preferred email content.
-- **Multilingual Support**: Expand reach with multiple language options.
-
----
-
 ## Conclusion
 All essential functionalities were tested and validated. The site is **responsive, functional, and ready for deployment** with minimal known issues. Future updates will focus on **performance optimizations and user engagement improvements**.
 

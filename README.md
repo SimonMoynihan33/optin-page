@@ -11,6 +11,7 @@ This is a responsive, SEO-optimized opt-in landing page built with Django, Boots
 - **SEO Optimization:** Includes proper metadata, Open Graph tags, and fast-loading assets.
 - **Dynamic Styling:** CSS animations and a gradient background for a sleek UI.
 - **Efficient Static File Handling:** Uses WhiteNoise to serve static files and images in production.
+- **Automated Ping Bot:** Prevents long Render boot times by periodically pinging the site.
 
 ## Technologies Used
 - **Backend:** Django 5.1.5
@@ -18,6 +19,7 @@ This is a responsive, SEO-optimized opt-in landing page built with Django, Boots
 - **Database:** Not used (Mailchimp API handles email storage)
 - **Static File Management:** WhiteNoise
 - **Deployment:** Render
+- **Automated Pinging:** UptimeRobot
 
 ## Installation & Setup
 
@@ -74,6 +76,17 @@ Visit `http://127.0.0.1:8000/` to test the application.
 4. Add **Environment Variables** in Render’s dashboard.
 5. Deploy and test at your Render-provided URL.
 
+## Preventing Render Sleep (Automated Pinging)
+Since Render's free-tier services **sleep after inactivity**, an automated ping bot is used to keep the site active:
+
+### **UptimeRobot**
+- **Sign up at** [UptimeRobot](https://uptimerobot.com/)
+- Click **"Add New Monitor"**
+- Choose **HTTP(s) Monitor**
+- Enter your Render site URL (`https://vinnys-email-opt-in-page.onrender.com/`)
+- Set **ping interval: 5 minutes** (free plan limit)
+- Click **Create Monitor** and it will keep the site alive
+
 ## Project Structure
 ```
 optin-page/
@@ -82,7 +95,6 @@ optin-page/
 │   │   ├── landing/css/optin.css
 │   │   ├── landing/images/
 │   ├── templates/landing/index.html
-│   ├── views.py
 │── optin_project/
 │── manage.py
 │── requirements.txt
@@ -101,16 +113,6 @@ optin-page/
 - **Secret Keys & API Keys** are stored in environment variables.
 - **Django Debug Mode** is disabled in production.
 - **CSRF Protection** is enabled.
-
-## Future Enhancements
-- Add an admin panel to view signups within Django.
-- Implement A/B testing for different landing page versions.
-- Improve the design with additional animations and visuals.
-- **Automated Ping Bot:** Create a script or use an external service (e.g., UptimeRobot, a simple cron job, or a lightweight serverless function) to periodically ping the site. This prevents Render’s long reboot times due to inactivity, ensuring a more seamless user experience.
-- **Advanced Analytics Integration:** Implement Google Analytics or a privacy-focused alternative like Plausible to track user interactions.
-- **Dark Mode Support:** Add a toggle to switch between light and dark themes dynamically.
-- **Email Customization:** Allow users to choose the type of content they receive upon sign-up.
-- **Multilingual Support:** Offer translations for different languages to expand the audience reach.
 
 ## Testing
 Testing was carried out in my [TESTING.md file](/TESTING.md)
